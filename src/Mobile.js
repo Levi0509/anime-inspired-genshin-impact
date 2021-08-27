@@ -1,8 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import Background from "./Background";
 import Slider from "react-slick";
 import "./StylesMob.css";
 import MobileCarousal from "./MobileCarousal";
+import Jean from "./Audio/Jean2.mp3";
+import Amber from "./Audio/Amber1.mp3";
+import Kaeya from "./Audio/Kaeya1.mp3";
+import Diluc from "./Audio/Diluc1.mp3";
+import Razor from "./Audio/Razor1.mp3";
+import Bennet from "./Audio/Bennet1.mp3";
+import Rosaria from "./Audio/Rosaria3.mp3";
 
 export default class Mobile extends Component {
   constructor(props) {
@@ -86,17 +94,6 @@ export default class Mobile extends Component {
         </div>
       );
     };
-    const AudioReturn = ({ onClick }) => {
-      return (
-        <audio autoPlay="autoplay" id="audio-id">
-          <source
-            src={this.state.AudioFiles[this.state.imageIndex]}
-            type="audio/mpeg"
-          />
-          Your browser does not support the audio element.
-        </audio>
-      );
-    };
     const settings = {
       dots: false,
       fade: true,
@@ -106,8 +103,8 @@ export default class Mobile extends Component {
       slidesToShow: 1,
       centerMode: true,
       centerPaddiing: 0,
-      nextArrow: <NextArrow onClick={this.AudioReturn} />,
-      prevArrow: <PrevArrow onClick={this.AudioReturn} />,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
 
@@ -131,8 +128,8 @@ export default class Mobile extends Component {
                   Name={this.state.names[this.state.imageIndex]}
                   Symbols={this.state.Symbols[this.state.imageIndex]}
                   Quote={this.state.quotes[this.state.imageIndex]}
+                  Audio={this.state.AudioFiles[this.state.imageIndex]}
                 />
-                <AudioReturn />
               </div>
             ))}
           </Slider>

@@ -67,15 +67,6 @@ export default class Default extends Component {
   };
 
   render() {
-    console.log(
-      { Jean },
-      { Kaeya },
-      { Amber },
-      { Diluc },
-      { Bennet },
-      { Rosaria },
-      { Razor }
-    );
     const child = React.createRef;
 
     const NextArrow = ({ onClick }) => {
