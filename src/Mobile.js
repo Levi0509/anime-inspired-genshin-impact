@@ -4,13 +4,13 @@ import Background from "./Background";
 import Slider from "react-slick";
 import "./StylesMob.css";
 import MobileCarousal from "./MobileCarousal";
-import Jean from "./Audio/Jean2.mp3";
+import Jean from "./Audio/Jean1.mp3";
 import Amber from "./Audio/Amber1.mp3";
 import Kaeya from "./Audio/Kaeya1.mp3";
 import Diluc from "./Audio/Diluc1.mp3";
 import Razor from "./Audio/Razor1.mp3";
 import Bennet from "./Audio/Bennet1.mp3";
-import Rosaria from "./Audio/Rosaria3.mp3";
+import Rosaria from "./Audio/Rosaria1.mp3";
 
 export default class Mobile extends Component {
   constructor(props) {
