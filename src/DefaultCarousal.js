@@ -10,21 +10,11 @@ export default class DefaultCarousal extends Component {
   }
 
   render() {
-    const AudioReturn = ({ onClick }) => {
-      return (
-        <audio autoPlay="autoplay" id="audio-id">
-          <source src={this.props.Audio} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      );
-    };
-
     return (
-      <div className="SlidesTrg" onLoad={this.AudioReturn}>
+      <div className="SlidesTrg">
         <div className="Ribbon">
           <img src={`https://i.ibb.co/${this.props.Symbols}.png `} alt="Logo" />
         </div>
-        <AudioReturn />
         <div className="data">
           <div className="NameMain">
             <div className="lineBold"></div>

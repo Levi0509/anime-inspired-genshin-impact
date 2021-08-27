@@ -67,8 +67,6 @@ export default class Default extends Component {
   };
 
   render() {
-    const child = React.createRef;
-
     const NextArrow = ({ onClick }) => {
       return (
         <div className="arrow Next" onClick={onClick}>
@@ -88,6 +86,17 @@ export default class Default extends Component {
         </div>
       );
     };
+    const AudioReturn = ({ onClick }) => {
+      return (
+        <audio autoPlay="autoplay" id="audio-id">
+          <source
+            src={this.state.AudioFiles[this.state.imageIndex]}
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      );
+    };
     const settings = {
       dots: false,
       fade: true,
@@ -97,14 +106,24 @@ export default class Default extends Component {
       slidesToShow: 1,
       centerMode: true,
       centerPaddiing: 0,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
+      nextArrow: <NextArrow onClick={this.AudioReturn} />,
+      prevArrow: <PrevArrow onClick={this.AudioReturn} />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
+    console.log(
+      { Jean },
+      { Kaeya },
+      { Amber },
+      { Diluc },
+      { Bennet },
+      { Rosaria },
+      { Razor }
+    );
     return (
-      <div className="bakabakabaka">
+      <div className="bakabakabaka" onLoad={this.AudioReturn}>
         <div className="backgroundDynamic">
           <Background />
+          <AudioReturn />
         </div>
         <div className="bakabaka">
           <Slider {...settings}>
@@ -116,12 +135,10 @@ export default class Default extends Component {
                 id="SLIDE"
               >
                 <DefaultCarousal
-                  ref="child"
                   image={img}
                   About={this.state.abouts[this.state.imageIndex]}
                   Name={this.state.names[this.state.imageIndex]}
                   Symbols={this.state.Symbols[this.state.imageIndex]}
-                  Audio={this.state.AudioFiles[this.state.imageIndex]}
                 />
               </div>
             ))}

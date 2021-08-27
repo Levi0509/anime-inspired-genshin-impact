@@ -94,6 +94,17 @@ export default class Mobile extends Component {
         </div>
       );
     };
+    const AudioReturn = ({ onClick }) => {
+      return (
+        <audio autoPlay="autoplay" id="audio-id">
+          <source
+            src={this.state.AudioFiles[this.state.imageIndex]}
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      );
+    };
     const settings = {
       dots: false,
       fade: true,
@@ -103,8 +114,8 @@ export default class Mobile extends Component {
       slidesToShow: 1,
       centerMode: true,
       centerPaddiing: 0,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
+      nextArrow: <NextArrow onClick={this.AudioReturn} />,
+      prevArrow: <PrevArrow onClick={this.AudioReturn} />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
 
@@ -112,6 +123,7 @@ export default class Mobile extends Component {
       <div className="bakabakabakaMob" onLoad={this.AudioReturn}>
         <div className="backgroundDynamic">
           <Background />
+          <AudioReturn />
         </div>
         <div className="bakabaka">
           <Slider {...settings}>
@@ -128,7 +140,6 @@ export default class Mobile extends Component {
                   Name={this.state.names[this.state.imageIndex]}
                   Symbols={this.state.Symbols[this.state.imageIndex]}
                   Quote={this.state.quotes[this.state.imageIndex]}
-                  Audio={this.state.AudioFiles[this.state.imageIndex]}
                 />
               </div>
             ))}

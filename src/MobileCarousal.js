@@ -4,21 +4,11 @@ import Sparks from "./Images/Sparks.png";
 
 export default class MobileCarousal extends Component {
   render() {
-    const AudioReturn = ({ onClick }) => {
-      return (
-        <audio autoPlay="autoplay" id="audio-id">
-          <source src={this.props.Audio} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      );
-    };
-
     return (
-      <div className="SlidesTrgMob" onLoad={this.AudioReturn}>
+      <div className="SlidesTrgMob">
         <div className="RibbonMob">
           <img src={`https://i.ibb.co/${this.props.Symbols}.png `} alt="Logo" />
         </div>
-        <AudioReturn />
         <div className="dataMob">
           <div className="NameMainMob">
             <div className="lineBoldMob"></div>
