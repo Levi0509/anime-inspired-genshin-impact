@@ -118,6 +118,15 @@ export default class Mobile extends Component {
       prevArrow: <PrevArrow onClick={this.AudioReturn} />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
+    console.log(
+      { Jean },
+      { Kaeya },
+      { Amber },
+      { Diluc },
+      { Bennet },
+      { Rosaria },
+      { Razor }
+    );
 
     return (
       <div className="bakabakabakaMob" onLoad={this.AudioReturn}>
