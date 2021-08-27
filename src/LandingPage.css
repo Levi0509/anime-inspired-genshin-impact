@@ -1,6 +1,7 @@
 .Body {
   background: #140505;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -17,14 +18,22 @@
 
 #ui .text {
   position: absolute;
-  font-size: 8rem;
+  font-size: 5rem;
   color: #fff;
-  line-height: 8rem;
+  line-height: 5rem;
   opacity: 0;
   font-family: "Carter One", cursive;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
 }
+@media screen and (min-width: 420px) {
+  #ui .text {
+    font-size: 8rem;
+    line-height: 8rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
 #ui .text:nth-child(1) {
   color: #fd3203;
   -webkit-clip-path: polygon(0% 0%, 0% 50%, 10% 50%);
