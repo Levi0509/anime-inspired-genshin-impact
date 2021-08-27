@@ -6,7 +6,7 @@ import Rotate from "./Images/Rotate.png";
 
 export default function Base2() {
   const PageCheck = () => {
-    if (window.innerWidth > 420) {
+    if (window.innerWidth > 500) {
       window.location.replace("/Default");
     }
   };

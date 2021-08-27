@@ -6,7 +6,7 @@ import Socials from "./Socials";
 
 export default function Base() {
   const PageCheck = () => {
-    if (window.innerWidth < 420) {
+    if (window.innerWidth < 500) {
       window.location.replace("/Mobile");
     }
   };

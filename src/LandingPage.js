@@ -4,7 +4,7 @@ import "./LandingPage.css";
 export default function LandingPage() {
   window.onload = function () {
     setTimeout(function () {
-      if (window.innerWidth < 415) {
+      if (window.innerWidth < 500) {
         window.location.href = "/Mobile";
       } else {
         window.location.href = "/Default";
