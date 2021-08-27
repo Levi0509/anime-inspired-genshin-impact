@@ -1,0 +1,93 @@
+.socialMedia {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 500 !important;
+}
+
+.socialToggle {
+  position: fixed;
+  top: 41px;
+  right: 45px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-radius: 60px;
+  transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 500;
+  margin-bottom: 20px;
+  background-color: rgba(240, 248, 255, 0);
+  background-image: url(Icons/Heart.png);
+  background-size: contain;
+}
+
+.socialToggle ~ .socialIcon {
+  visibility: hidden;
+}
+
+.socialToggle:checked {
+  background-image: url(Icons/close.png);
+  background-size: contain;
+}
+.socialToggle:checked ~ .socialIcon {
+  visibility: visible;
+  z-index: 999;
+  cursor: pointer;
+}
+/* .socialIcon > li {
+  background-color: rgb(53, 13, 13);
+} */
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul > li > a > img {
+  height: 40px;
+  width: 40px;
+}
+ul > li > a {
+  margin: 0 5px 0 0;
+  border-radius: 50% !important;
+  height: 40px;
+  width: 40px;
+}
+.socialIcon {
+  position: fixed;
+  right: 30px;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialsHor {
+  position: fixed;
+  top: 35px;
+  right: 100px;
+}
+
+.socialsHor > ul {
+  display: flex;
+  flex-direction: row;
+}
+.socialsVer {
+  position: fixed;
+  top: 80px;
+  right: 45px;
+}
+
+.socialsVer > ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.socialsVer > ul > li {
+  margin: 5px 3px 0 0;
+}

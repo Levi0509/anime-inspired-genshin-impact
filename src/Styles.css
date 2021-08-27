@@ -1,0 +1,287 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.none {
+  display: none;
+}
+.bakabaka {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(0, 2, 129, 0);
+  /* clip-path: polygon(0% 50%, 50% 100%, 100% 50%, 50% 0%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.backgroundDynamic {
+  height: 100vh;
+  z-index: -10 !important;
+}
+.background > img {
+  height: 100vh;
+  width: 100vw;
+  filter: blur(5px);
+}
+.slide {
+  z-index: 100 !important;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #68ffa700;
+  bottom: 0vh;
+}
+
+.activeSlide {
+  position: absolute;
+  z-index: 1000 !important;
+  top: 0;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+}
+
+.arrow {
+  background: hsla(339, 82%, 57%, 1);
+  background: radial-gradient(
+    circle,
+    hsla(339, 82%, 57%, 0.4) 17%,
+    hsla(220, 1%, 54%, 1) 100%
+  );
+  background: -moz-radial-gradient(
+    circle,
+    hsla(339, 82%, 57%, 0.4) 17%,
+    hsla(220, 1%, 54%, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(339, 82%, 57%, 0.4) 17%,
+    hsla(220, 1%, 54%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EB3877", endColorstr="#898A8C", GradientType=1 );
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 21px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 21px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 21px rgba(0, 0, 0, 0.5);
+}
+.arrow:hover {
+  transition: all 1s;
+}
+
+.arrow > .material-icons {
+  transition: color 300ms;
+  font-size: 4rem;
+  font-weight: 100 !important;
+  opacity: 0.5;
+}
+
+.arrow > .material-icons:hover {
+  color: #6cc0ab;
+}
+
+.Next {
+  right: 10vw;
+  top: 80%;
+}
+.Next:hover {
+  box-shadow: 2px 8px 9px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 2px 8px 9px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 8px 9px rgba(0, 0, 0, 1);
+  transform: translate(-2%, -5%) rotate(45deg);
+}
+.Next > .material-icons {
+  transform: rotate(-45deg);
+}
+.Prev > .material-icons {
+  transform: rotate(-45deg);
+}
+
+.Prev {
+  left: 10vw;
+  top: 80%;
+}
+.Prev:hover {
+  box-shadow: 7px 6px 9px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 7px 6px 9px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 7px 6px 9px rgba(0, 0, 0, 1);
+  transform: translate(-2%, -4%) rotate(45deg);
+}
+
+.SlidesTrg {
+  position: fixed;
+  top: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex;
+  overflow: hidden !important;
+  z-index: 1000 !important;
+}
+
+.Ribbon {
+  position: fixed;
+  width: 110vw;
+  height: 75vh;
+  background-color: rgba(29, 28, 28, 0.623);
+  transform: rotate(55deg);
+  margin-left: -65vh;
+  z-index: 3000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1 !important;
+}
+
+.Ribbon > img {
+  height: 350px;
+  width: 350px;
+  transform: rotate(-55deg);
+  margin-left: -10vh;
+  opacity: 0.18;
+  z-index: -1 !important;
+}
+
+.lineBold {
+  position: relative;
+  top: 3vh;
+  left: 0vw;
+  width: 15vw;
+  height: 4px;
+  background-color: orange;
+}
+.NameMain {
+  position: relative;
+  width: 40vw;
+  top: 15vh;
+  left: 15vw;
+  font-size: 2.2rem;
+  font-family: "Hahmlet";
+  text-align: left;
+}
+.data {
+  color: rgb(255, 255, 255);
+  display: flex;
+}
+
+.Abt {
+  width: 30vw;
+  padding: 40px 20px 40px 40px;
+  position: absolute;
+  top: 40vh;
+  left: 15vw;
+  height: 20vh;
+  background-color: rgba(26, 23, 23, 0.781);
+  text-align: left;
+  font-size: 1.2rem;
+  z-index: 50 !important;
+}
+.Abtabt::-webkit-scrollbar {
+  width: 0.1em;
+  color: #ff68eb;
+}
+.abt {
+  width: 30vw;
+  padding: 40px 20px 40px 40px;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+.Abtabt {
+  overflow-y: scroll;
+  width: 30vw;
+  height: 20vh;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: thin !important;
+}
+.mainBack {
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+.float {
+  opacity: 0.2;
+  width: 30vw;
+  height: 10vh;
+  position: relative;
+  bottom: -80vh;
+  left: 0vw;
+  display: flex;
+  flex-direction: column;
+  animation: Float 30s linear alternate infinite;
+  color: whitesmoke;
+}
+.roleSection {
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  margin-left: 77px;
+  margin-bottom: -27px;
+}
+.role {
+  padding: 0 0 2px 12px;
+  letter-spacing: 3.5px;
+}
+.roleSection > .material-icons {
+  letter-spacing: -15px;
+  font-size: 24px;
+}
+
+.nameShort {
+  font-size: 56px;
+  margin-top: -16px;
+  letter-spacing: 5.8px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.m {
+  font-size: 90px;
+}
+
+.SlidesTrg > .data > img {
+  animation: Float2 10s linear alternate-reverse infinite;
+  height: 100vh;
+  position: absolute;
+  right: -6vw;
+  bottom: 0;
+  z-index: 40 !important;
+  width: auto;
+}
+.Sparks > img {
+  z-index: 49 !important;
+  position: absolute;
+  bottom: 0;
+  left: 0vh;
+}
+audio {
+  opacity: 0;
+}
+
+@keyframes Float {
+  from {
+    transform: translateX(20%);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+@keyframes Float2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-2%);
+  }
+}
