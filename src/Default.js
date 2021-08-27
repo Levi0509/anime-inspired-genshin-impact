@@ -76,6 +76,7 @@ export default class Default extends Component {
       { Rosaria },
       { Razor }
     );
+    const child = React.createRef;
 
     const NextArrow = ({ onClick }) => {
       return (
@@ -96,17 +97,6 @@ export default class Default extends Component {
         </div>
       );
     };
-    const AudioReturn = ({ onClick }) => {
-      return (
-        <audio autoPlay="autoplay" id="audio-id">
-          <source
-            src={this.state.AudioFiles[this.state.imageIndex]}
-            type="audio/mpeg"
-          />
-          Your browser does not support the audio element.
-        </audio>
-      );
-    };
     const settings = {
       dots: false,
       fade: true,
@@ -116,12 +106,12 @@ export default class Default extends Component {
       slidesToShow: 1,
       centerMode: true,
       centerPaddiing: 0,
-      nextArrow: <NextArrow onClick={this.AudioReturn} />,
-      prevArrow: <PrevArrow onClick={this.AudioReturn} />,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
     return (
-      <div className="bakabakabaka" onLoad={this.AudioReturn}>
+      <div className="bakabakabaka">
         <div className="backgroundDynamic">
           <Background />
         </div>
@@ -135,12 +125,13 @@ export default class Default extends Component {
                 id="SLIDE"
               >
                 <DefaultCarousal
+                  ref="child"
                   image={img}
                   About={this.state.abouts[this.state.imageIndex]}
                   Name={this.state.names[this.state.imageIndex]}
                   Symbols={this.state.Symbols[this.state.imageIndex]}
+                  Audio={this.state.AudioFiles[this.state.imageIndex]}
                 />
-                <AudioReturn />
               </div>
             ))}
           </Slider>
