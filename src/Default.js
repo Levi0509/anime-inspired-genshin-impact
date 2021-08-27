@@ -1,8 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import Background from "./Background";
 import Slider from "react-slick";
 import "./Styles.css";
 import DefaultCarousal from "./DefaultCarousal";
+
+import Jean from "./Audio/Jean2.mp3";
+import Amber from "./Audio/Amber1.mp3";
+import Kaeya from "./Audio/Kaeya1.mp3";
+import Diluc from "./Audio/Diluc1.mp3";
+import Razor from "./Audio/Razor1.mp3";
+import Bennet from "./Audio/Bennet1.mp3";
+import Rosaria from "./Audio/Rosaria3.mp3";
 
 export default class Default extends Component {
   constructor(props) {
@@ -58,6 +67,16 @@ export default class Default extends Component {
   };
 
   render() {
+    console.log(
+      { Jean },
+      { Kaeya },
+      { Amber },
+      { Diluc },
+      { Bennet },
+      { Rosaria },
+      { Razor }
+    );
+
     const NextArrow = ({ onClick }) => {
       return (
         <div className="arrow Next" onClick={onClick}>
@@ -101,7 +120,6 @@ export default class Default extends Component {
       prevArrow: <PrevArrow onClick={this.AudioReturn} />,
       beforeChange: (current, next) => this.handleIndex(next),
     };
-
     return (
       <div className="bakabakabaka" onLoad={this.AudioReturn}>
         <div className="backgroundDynamic">
