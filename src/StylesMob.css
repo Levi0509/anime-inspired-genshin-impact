@@ -42,23 +42,30 @@
 }
 
 .Arrow {
-  background: hsla(339, 82%, 57%, 1);
+  background: hsla(141, 81%, 87%, 1);
+
   background: radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
+
   background: -moz-radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
+
   background: -webkit-radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EB3877", endColorstr="#898A8C", GradientType=1 );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#c5f9d7", endColorstr="#f7d486", GradientType=1 );
   position: absolute;
   cursor: pointer;
   z-index: 100;
@@ -144,7 +151,7 @@
 .RibbonMob > img {
   height: 200px;
   width: 200px;
-  transform: rotate(35deg) translate(10%, -70%);
+  transform: rotate(35deg) translate(10%, -40%);
   margin-left: -10vh;
   opacity: 0.18;
   z-index: -1 !important;
@@ -152,16 +159,16 @@
 
 .lineBoldMob {
   position: fixed;
-  top: 10vh;
+  top: 7vh;
   left: -5vw;
-  width: 50vw;
+  width: 160px;
   height: 4px;
   background-color: orange;
 }
 .NameMainMob {
   position: fixed;
   width: 40vw;
-  top: 4vh;
+  top: 2vh;
   left: -5vw;
   font-size: 27px;
   font-family: "Hahmlet";
@@ -176,7 +183,7 @@
   width: 30vw;
   padding: 40px 20px 40px 40px;
   position: absolute;
-  top: 55vh;
+  top: 50vh;
   left: 10vw;
   height: 20vh;
   text-align: left;
@@ -238,7 +245,7 @@
   height: 110vh;
   width: 100vw;
   position: fixed;
-  left: -20vw;
+  left: -25vw;
   z-index: 40 !important;
   width: auto;
 }
@@ -265,14 +272,14 @@ audio {
     transform: translateX(15%);
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
   .background > img {
     object-fit: cover;
     object-position: center;
     filter: blur(3px);
   }
 }
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 480px) {
   .bakabakabakaMob {
     display: none;
   }

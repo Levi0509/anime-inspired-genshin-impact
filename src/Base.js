@@ -3,6 +3,7 @@ import MondstadtNight from "./Audio/Mondstadt Theme (Night).mp3";
 import MondstadtDusk from "./Audio/Dusk in Mondstadt.mp3";
 import Default from "./Default";
 import Socials from "./Socials";
+import Reload from "./Images/Reload.png";
 
 export default function Base() {
   const PageCheck = () => {
@@ -38,6 +39,9 @@ export default function Base() {
       <Socials />
       <Time />
       <Default />
+      <div className="ReloadScrn">
+        <img src={Reload} alt="" />
+      </div>
     </div>
   );
 }

@@ -32,9 +32,15 @@ export default function Base2() {
       );
     }
   };
-
+  console.log(MondstadtDusk, MondstadtNight);
   return (
-    <div className="Base_page" onLoad={PageCheck}>
+    <div
+      className="Base_page"
+      onLoad={() => {
+        PageCheck();
+        Time();
+      }}
+    >
       <Time />
       <Mobile />
       <div className="RotateScrn">

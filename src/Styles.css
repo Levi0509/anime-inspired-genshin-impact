@@ -46,23 +46,30 @@
 }
 
 .arrow {
-  background: hsla(339, 82%, 57%, 1);
+  background: hsla(141, 81%, 87%, 1);
+
   background: radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
+
   background: -moz-radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
+
   background: -webkit-radial-gradient(
     circle,
-    hsla(339, 82%, 57%, 0.4) 17%,
-    hsla(220, 1%, 54%, 1) 100%
+    hsla(141, 81%, 87%, 0.5) 5%,
+    hsla(41, 88%, 75%, 1) 40%,
+    hsla(358, 82%, 71%, 1) 100%
   );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EB3877", endColorstr="#898A8C", GradientType=1 );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#c5f9d7", endColorstr="#f7d486", GradientType=1 );
   position: absolute;
   cursor: pointer;
   z-index: 100;
@@ -265,6 +272,31 @@
   bottom: 0;
   left: 0vh;
 }
+.ReloadScrn {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .bakabakabaka {
+    display: none;
+  }
+  .socialMedia {
+    display: none;
+  }
+  .ReloadScrn {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 33, 33);
+  }
+  .ReloadScrn > img {
+    width: 130px;
+    height: 300px;
+    transform: rotate(-90deg);
+    animation: Shake 0.8s infinite linear;
+  }
+}
+
 audio {
   opacity: 0;
 }
@@ -283,5 +315,31 @@ audio {
   }
   to {
     transform: translateX(-2%);
+  }
+}
+@keyframes Shake {
+  0% {
+    transform: translateX(0%) rotate(-90deg);
+  }
+  12.5% {
+    transform: translateX(-3%) rotate(-92deg);
+  }
+  25% {
+    transform: translateX(-6%) rotate(-95deg);
+  }
+  0% {
+    transform: translateX(-3%) rotate(-92deg);
+  }
+  50% {
+    transform: translateX(0) rotate(-90deg);
+  }
+  0% {
+    transform: translateX(3%) rotate(-88deg);
+  }
+  75% {
+    transform: translateX(6%) rotate(-85deg);
+  }
+  87.5% {
+    transform: translateX(3%) rotate(-88deg);
   }
 }
